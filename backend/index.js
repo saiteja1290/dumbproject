@@ -10,12 +10,13 @@ const app = express();
 // const cors = require('cors');
 app.use(express.json());
 //CORS Policy 
-//app.use(cors())
+// app.use(cors())
 app.use(cors({
     origin: 'https://dumbproject-api.vercel.app',
+    // origin: 'https://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
- }))
+}))
 app.get('/', (req, res) => {
     console.log(req)
     return response.status(200).send("Welcome to MERN stack Project")
